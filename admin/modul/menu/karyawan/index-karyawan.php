@@ -121,24 +121,37 @@
                                     </tr>
                                 </tbody>
                                 <!-- <tbody>
+                                    <!-- <?php
+                                            $conn = mysqli_connect("localhost", "root", "", "db_imas");
+
+                                            // Lakukan kueri database untuk mengambil data karyawan
+                                            $result = mysqli_query($conn, "SELECT * FROM tabel_karyawan");
+
+                                            // Periksa apakah ada data yang ditemukan
+                                            if (mysqli_num_rows($result) > 0) {
+                                                $no = 1;
+                                                // Loop melalui setiap baris data
+                                                while ($row = mysqli_fetch_assoc($result)) {
+                                            ?>
+                                            <tr>
+                                                <td><?= $no++; ?>.</td>
+                                                <td><?= $row['id_karyawan']; ?></td>
+                                                <td><?= $row['nama_karyawan']; ?></td>
+                                                <td><?= $row['email']; ?></td>
+                                                <td><?= $row['alamat']; ?></td>
+                                                <td><?= $row['jabatan']; ?></td>
+                                                <td>
+                                                    <a class="btn btn-info btn-sm" href="?page=menu&act=edit&id=<?= $row['id_karyawan'] ?>"><i class="far fa-edit"></i></a>
+                                                    <a class="btn btn-danger btn-sm" onclick="return confirm('Yakin Hapus Data ??')" href="?page=menu&act=del&id=<?= $row['id_karyawan'] ?>"><i class=" fas fa-trash"></i></a>
+                                                </td>
+                                            </tr>
                                     <?php
-                                    $no = 1;
-                                    $guru = mysqli_query($con, "SELECT * FROM tb_guru");
-                                    foreach ($guru as $g) { ?>
-                                        <tr>
-                                            <td><?= $no++; ?>.</td>
-                                            <td><?= $g['kode_karyawan']; ?></td>
-                                            <td><?= $g['nama']; ?></td>
-                                            <td><?= $g['email']; ?></td>
-                                            <td><?= $g['alamat']; ?></td>
-                                            <td><?= $g['jabatan']; ?></td>
-                                            <td>
-                                                <a class="btn btn-info btn-sm" href="?page=menu&act=edit&id=<?= $g['id_guru'] ?>"><i class="far fa-edit"></i></a>
-                                                <a class="btn btn-danger btn-sm" onclick="return confirm('Yakin Hapus Data ??')" href="?page=menu&act=del&id=<?= $g['id_guru'] ?>"><i class=" fas fa-trash"></i></a>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody> -->
+                                                }
+                                            } else {
+                                                echo '<tr><td colspan="6">Tidak ada data yang ditemukan</td></tr>';
+                                            }
+                                    ?> -->
+                                </tbody>
                             </table>
                         </div>
                     </div>

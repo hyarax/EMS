@@ -1,6 +1,5 @@
 <?php
-session_start();
-include './config/db.php';
+$con = new mysqli("localhost", "root", "", "db_imas") or die(mysqli_error($con));
 ?>
 
 <!DOCTYPE html>
@@ -24,13 +23,11 @@ include './config/db.php';
 </head>
 
 <body>
-
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<form method="post" action="" class="login100-form validate-form">
 					<span class="login100-form-title p-b-48">
-						<!-- <i class="zmdi zmdi-font"></i> -->
 						<img src="./assets/img/logo-hyarax.png" width="200">
 					</span>
 
@@ -51,7 +48,7 @@ include './config/db.php';
 							<option>Level</option>
 							<option value="1">Admin</option>
 
-						</select>
+						</select>a
 					</div>
 					<br>
 
@@ -81,38 +78,38 @@ include './config/db.php';
 							$_SESSION['admin'] = $d['id_admin'];
 							echo "
 						<script type='text/javascript'>
-						setTimeout(function () { 
-						
-						swal('(Administrator) ', 'Login berhasil', {
-						icon : 'success',
-						buttons: {        			
-						confirm: {
-						className : 'btn btn-success'
-						}
-						},
-						});    
-						},10);  
-						window.setTimeout(function(){ 
-						window.location.replace('./admin/dashboard.php');
-						} ,3000);   
+							setTimeout(function () {
+
+								swal('(Administrator) ', 'Login berhasil', {
+									icon: 'success',
+									buttons: {
+										confirm: {
+											className: 'btn btn-success'
+										}
+									},
+								});
+							}, 10);
+							window.setTimeout(function () {
+								window.location.replace('./admin/dashboard.php');
+							}, 3000);   
 						</script>";
 						} else {
 							echo "
 						<script type='text/javascript'>
-						setTimeout(function () { 
-						
-						swal('Sorry!', 'Username / Password Salah', {
-						icon : 'error',
-						buttons: {        			
-						confirm: {
-						className : 'btn btn-danger'
-						}
-						},
-						});    
-						},10);  
-						window.setTimeout(function(){ 
-						window.location.replace('./');
-						} ,3000);   
+							setTimeout(function () {
+
+								swal('Sorry!', 'Username / Password Salah', {
+									icon: 'error',
+									buttons: {
+										confirm: {
+											className: 'btn btn-danger'
+										}
+									},
+								});
+							}, 10);
+							window.setTimeout(function () {
+								window.location.replace('./');
+							}, 3000);   
 						</script>";
 						}
 					} else {

@@ -29,7 +29,7 @@
 					Edit Data Karyawan
 				</div>
 				<div class="card-body">
-					<form action="?page=guru&act=proses" method="post" enctype="multipart/form-data">
+					<form action="proses.php" method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<label>Nama Lengkap</label>
 							<input name="nama" type="text" class="form-control">
@@ -86,8 +86,8 @@
 						</div>
 
 						<div class="form-group">
-							<!-- <a class="btn btn-success" href="?page=menu-karyawan&act=karyawan">Simpan</a> -->
-							<a href="?page=menu&act=karyawan" class="btn btn-success"> Simpan</a>
+							<button name="editKaryawan" type="submit" class="btn btn-primary"> Update</button>
+							<!-- <a href="?page=menu&act=karyawan" class="btn btn-success"> Simpan</a> -->
 							<a href="javascript:history.back()" class="btn btn-danger"> Batal</a>
 						</div>
 

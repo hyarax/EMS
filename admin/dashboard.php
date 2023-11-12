@@ -5,7 +5,7 @@ $password = "";
 $database = "db_imas";
 
 // Membuat koneksi ke database
-$conn = mysqli_connect($server, $username, $password, $database);
+$conn = new mysqli("localhost", "root", "", "db_imas") or die(mysqli_error($conn));
 
 // Periksa koneksi
 if (!$conn) {
@@ -13,8 +13,8 @@ if (!$conn) {
 }
 // jumlah siswa
 $jumlahSiswa = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_siswa WHERE status=1 "));
-// jumlah guru
-$jumlahGuru = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tb_guru WHERE id_guru "));
+// jumlah karyawan
+$jumlahKaryawan = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tabel_karyawan WHERE id_karyawan"));
 
 // Query untuk mengambil data admin
 $query = "SELECT * FROM tb_admin";
