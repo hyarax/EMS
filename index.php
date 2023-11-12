@@ -48,7 +48,7 @@ $con = new mysqli("localhost", "java2779_AgungRamadhan", "Lr4dp9900", "java2779_
 							<option>Level</option>
 							<option value="1">Admin</option>
 
-						</select>a
+						</select>
 					</div>
 					<br>
 
