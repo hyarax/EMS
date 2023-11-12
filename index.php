@@ -1,5 +1,5 @@
 <?php
-$con = new mysqli("localhost", "root", "", "db_imas") or die(mysqli_error($con));
+$con = new mysqli("localhost", "java2779_AgungRamadhan", "Lr4dp9900", "java2779_Agung_PenggajianEMS") or die(mysqli_error($con));
 ?>
 
 <!DOCTYPE html>

@@ -5,7 +5,7 @@ $password = "";
 $database = "db_imas";
 
 // Membuat koneksi ke database
-$conn = new mysqli("localhost", "root", "", "db_imas") or die(mysqli_error($conn));
+$conn = new mysqli("localhost", "java2779_AgungRamadhan", "Lr4dp9900", "java2779_Agung_PenggajianEMS") or die(mysqli_error($conn));
 
 // Periksa koneksi
 if (!$conn) {
